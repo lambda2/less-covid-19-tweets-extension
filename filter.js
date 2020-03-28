@@ -30,7 +30,6 @@ async function getPage(id) {
 
     // We don't want "too small" pages
     if (unfiltered[0].length < 2000) {
-      console.log("This article is too small: ", {unfiltered});
       return null
     }
     return unfiltered[0]
@@ -45,7 +44,6 @@ async function fetchAndQueue() {
   const npages = rnpages && rnpages.filter(e => e !== null)
   if (npages && npages.length > 0) {
     Array.prototype.push.apply(articles, npages)
-    console.log("After Adding ! ", articles.length);
   }
   return true
 }
@@ -116,10 +114,8 @@ const fillQueue = async () => {
 
   try {
     lock = true
-    console.log("Fillqueue, articles length is ", articles.length);
     
     if (articles.length < 50) {
-      console.log("Adding articles ", articles.length);
       await fetchAndQueue()
     }
     await replaceTweets()
