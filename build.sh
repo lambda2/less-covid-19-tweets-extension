@@ -1,2 +1,2 @@
 rm app.zip
-zip -r app.zip images filter.js manifest.json
+zip -r app.zip images filter.js manifest.json _locales
