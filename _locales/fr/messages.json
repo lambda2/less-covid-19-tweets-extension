@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "Moins de COVID-19 sur Twitter",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Remplace les tweets sur le COVID-19 par des articles wikipédia aléatoires.",
+    "description": "Extension description"
+  }
+}
